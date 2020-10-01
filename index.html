@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   </head>
   <body>
-    <div>
+    <div class="p-5">
       <h1><small>URL Builder</small></h1>
-      <div class="bg-light">
+      <div class="bg-light p-5">
         <h5><small>Enter URL and parameters</small></h5>
-        <table>
-          <tr>
-            <td><span class="text-danger">*</span>&nbsp;Original URL</td>
-            <td><input id="input-url" type="url" required></td>
+        <table class="pl-1">
+          <tbody><tr class="p-1">
+            <td class="p-1"><span class="text-danger">*</span>&nbsp;Original URL</td>
+            <td class="p-1"><input id="input-url" type="url" required=""></td>
           </tr>
-          <tr>
-            <td><span class="text-danger">*</span>&nbsp;Source</td>
-            <td><input id="input-source" type="text"></td>
+          <tr class="p-1">
+            <td class="p-1"><span class="text-danger">*</span>&nbsp;Source</td>
+            <td class="p-1"><input id="input-source" type="text"></td>
           </tr>
-          <tr>
-            <td><span class="text-danger">*</span>&nbsp;Team</td>
-            <td><input id="input-team" type="email"></td>
+          <tr class="p-1">
+            <td class="p-1"><span class="text-danger">*</span>&nbsp;Team</td>
+            <td class="p-1"><input id="input-team" type="email"></td>
           </tr>
-        </table>
-        <div class="bg-white border">
-          <h4><small>Enter URL and parameters</small></h4>
+        </tbody></table><br>
+        <div class="bg-white border p-5">
+          <h4><small>Generated URL</small></h4>
+          <textarea class="w-100" rows="1"></textarea>
+          <br>
+          
         </div>
       </div>
     </div>
