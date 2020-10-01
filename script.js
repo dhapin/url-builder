@@ -1,1 +1,2 @@
-
+document.body.addEventListener('resize', () => {
+});
