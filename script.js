@@ -1,5 +1,5 @@
 $('#input-url').on('input blur', () => {
-  if ($('#input-url').val() != '') {
+  if ($('#input-url').val().trim() != '') {
     $('#input-url').addClass('input-success').removeClass('input-danger');
   } else {
     $('#input-url').addClass('input-danger').removeClass('input-success');
@@ -7,7 +7,7 @@ $('#input-url').on('input blur', () => {
 });
 
 $('#input-source').on('input blur', () => {
-  if ($('#input-source').val() != '') {
+  if ($('#input-source').val().trim() != '') {
     $('#input-source').addClass('input-success').removeClass('input-danger');
   } else {
     $('#input-source').addClass('input-danger').removeClass('input-success');
@@ -15,7 +15,7 @@ $('#input-source').on('input blur', () => {
 });
 
 $('#input-team').on('input blur', () => {
-  if ($('#input-team').val() != '' && validateEmail($('#input-team').val())) {
+  if ($('#input-team').val().trim() != '' && validateEmail($('#input-team').val())) {
     $('#input-team').addClass('input-success').removeClass('input-danger');
   } else {
     $('#input-team').addClass('input-danger').removeClass('input-success');
@@ -30,7 +30,7 @@ $('#input-url, #input-source, #input-team').on('input blur', () => {
 
 $('#copy-url').on('click', () => {
   if ($('#generated-url').val() != '') {
-    $('#generated-url').setSelectionRange(0, $('#generated-url').val().trim().length);
+    $('#generated-url').setSelectionRange(0, $('#generated-url').val().length);
     document.execCommand("copy");
   }
 });
