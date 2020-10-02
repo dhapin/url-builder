@@ -29,8 +29,8 @@ $('#input-url, #input-source, #input-team').on('input blur', () => {
 });
 
 $('#copy-url').on('click', () => {
-  if (!($('#generated-url').val() != '')) {
-    $('#generated-url').select();
+  if ($('#generated-url').val() != '') {
+    $('#generated-url').setSelectionRange(0, $('#generated-url').val().trim().length);
     document.execCommand("copy");
   }
 });
