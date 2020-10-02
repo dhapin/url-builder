@@ -2,7 +2,7 @@ $('#input-url').on('input blur', () => {
   if ($('#input-url').val() != '') {
     $('#input-url').addClass('input-success').removeClass('input-danger');
   } else {
-    $('#input-url').addClass('input-success').removeClass('input-danger');
+    $('#input-url').addClass('input-danger').removeClass('input-success');
   }
 });
 
@@ -10,7 +10,7 @@ $('#input-source').on('input blur', () => {
   if ($('#input-source').val() != '') {
     $('#input-source').addClass('input-success').removeClass('input-danger');
   } else {
-    $('#input-source').addClass('input-success').removeClass('input-danger');
+    $('#input-source').addClass('input-danger').removeClass('input-success');
   }
 });
 
@@ -18,7 +18,7 @@ $('#input-team').on('input blur', () => {
   if ($('#input-team').val() != '' && validateEmail($('#input-team').val())) {
     $('#input-team').addClass('input-success').removeClass('input-danger');
   } else {
-    $('#input-team').addClass('input-success').removeClass('input-danger');
+    $('#input-team').addClass('input-danger').removeClass('input-success');
   }
 });
 
