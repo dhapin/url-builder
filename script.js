@@ -1,6 +1,6 @@
 $('#input-url').on('input', () => {
   if ($('#input-url').val() != '') {
-    $('#input-url').removeClass('')
+    $('#input-url').addClass('input-success').removeClass('input-danger');
   }
 });
 function validateEmail(email) {
