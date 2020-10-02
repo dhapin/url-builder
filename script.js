@@ -5,14 +5,14 @@ $('#input-url').on('input', () => {
 });
 
 $('#input-source').on('input', () => {
-  if ($('#input-url').val() != '') {
-    $('#input-url').addClass('input-success').removeClass('input-danger');
+  if ($('#input-source').val() != '') {
+    $('#input-source').addClass('input-success').removeClass('input-danger');
   }
 });
 
 $('#input-team').on('input', () => {
-  if ($('#input-url').val() != '') {
-    $('#input-url').addClass('input-success').removeClass('input-danger');
+  if ($('#input-team').val() != '' && validateEmail($('#input-team').val())) {
+    $('#input-team').addClass('input-success').removeClass('input-danger');
   }
 });
 
