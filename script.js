@@ -18,7 +18,14 @@ $('#input-team').on('input blur', () => {
 
 $('#input-url, #input-source, #input-team').on('input blur', () => {
   if ($('#input-url').hasClass('input-success') && $('#input-source').hasClass('input-success') && $('#input-team').hasClass('input-success')) {
-    $('#generated-url').val($('#input-url') + "#src=" + encodeURIComponent($('#input-source')) + "&team=" + encodeURIComponent($('#input-team')));
+    $('#generated-url').val($('#input-url').val().trim() + "#src=" + encodeURIComponent($('#input-source').val().trim()) + "&team=" + encodeURIComponent($('#input-team').val().trim()));
+  }
+});
+
+$('#copy-url').on('click', () => {
+  if (!($('#generated-url').val() != '')) {
+    $('#generated-url').setSelectionRange(0, $('#generated-url').val().length);
+    document.execCommand("copy");
   }
 });
 
