@@ -1,17 +1,23 @@
 $('#input-url').on('input blur', () => {
   if ($('#input-url').val() != '') {
     $('#input-url').addClass('input-success').removeClass('input-danger');
+  } else {
+    $('#input-url').addClass('input-success').removeClass('input-danger');
   }
 });
 
 $('#input-source').on('input blur', () => {
   if ($('#input-source').val() != '') {
     $('#input-source').addClass('input-success').removeClass('input-danger');
+  } else {
+    $('#input-source').addClass('input-success').removeClass('input-danger');
   }
 });
 
 $('#input-team').on('input blur', () => {
   if ($('#input-team').val() != '' && validateEmail($('#input-team').val())) {
+    $('#input-team').addClass('input-success').removeClass('input-danger');
+  } else {
     $('#input-team').addClass('input-success').removeClass('input-danger');
   }
 });
@@ -24,7 +30,7 @@ $('#input-url, #input-source, #input-team').on('input blur', () => {
 
 $('#copy-url').on('click', () => {
   if (!($('#generated-url').val() != '')) {
-    $('#generated-url').setSelectionRange(0, $('#generated-url').val().length);
+    $('#generated-url').select();
     document.execCommand("copy");
   }
 });
