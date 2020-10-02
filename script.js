@@ -30,7 +30,7 @@ $('#input-url, #input-source, #input-team').on('input blur', () => {
 
 $('#copy-url').on('click', () => {
   if ($('#generated-url').val() != '') {
-    $('#generated-url').setSelectionRange(0, $('#generated-url').val().length);
+    $('#generated-url').select();
     document.execCommand("copy");
   }
 });
