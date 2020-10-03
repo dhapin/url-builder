@@ -49,8 +49,7 @@ $('#shorten').on('click', () => {
       data: JSON.stringify(postData), 
       success: function(data, textStatus, xhr){
         if (xhr.status == 200 || xhr.status == 201) {
-          var dataObj = JSON.parse(data);
-          $('#generated-url').val(dataObj.link);
+          $('#generated-url').val(data.link);
         }
       }
     });
