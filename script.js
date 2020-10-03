@@ -35,6 +35,28 @@ $('#copy-url').on('click', () => {
   }
 });
 
+$('#shorten').on('click', () => {
+  if ($('#generated-url').val() != '') {
+    var postData = {};
+    postData.long_url = $('#generated-url').val();
+    $.ajax({
+      url: 'https://api-ssl.bitly.com/v4/shorten', 
+      type: 'POST', 
+      headers: {
+        'Authorization': 'Bearer 81ec83d8b7ebbb1f9b7a235fd790b3492aa4ff28', 
+        'Content-Type': 'application/json'
+      }, 
+      data: JSON.stringify(postData), 
+      success: function(data, textStatus, xhr){
+        if (xhr.status == 200 || xhr.status == 201) {
+          var dataObj = JSON.parse(data);
+          $('#generated-url').val(dataObj.link);
+        }
+      }
+    });
+  }
+});
+
 function validateEmail(email) {
   if (email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
     return (true);
