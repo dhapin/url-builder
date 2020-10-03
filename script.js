@@ -24,7 +24,7 @@ $('#input-team').on('input blur', () => {
 
 $('#input-url, #input-source, #input-team').on('input blur', () => {
   if ($('#input-url').hasClass('input-success') && $('#input-source').hasClass('input-success') && $('#input-team').hasClass('input-success')) {
-    if ($('#generated-url').val().indexOf("https://") == 0 || $('#generated-url').val().indexOf("http://") == 0) {
+    if ($('#input-url').val().indexOf("https://") == 0 || $('#input-url').val().indexOf("http://") == 0) {
       $('#generated-url').val($('#input-url').val().trim() + "#src=" + encodeURIComponent($('#input-source').val().trim()) + "&team=" + encodeURIComponent($('#input-team').val().trim()));
     } else {
       $('#generated-url').val("http://" + $('#input-url').val().trim() + "#src=" + encodeURIComponent($('#input-source').val().trim()) + "&team=" + encodeURIComponent($('#input-team').val().trim()));
